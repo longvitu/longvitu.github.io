@@ -86,7 +86,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <img src="static/images/teaser.jpg"/>
+        <img src="static/images/teaser.png"/>
         <div class="content has-text-justified">
           <p style="text-align:justify; margin-top: 1.5em;">
             This paper introduces <b>LongViTU</b>, a large-scale (~121k QA pairs, ~900h videos), automatically generated dataset for long-form video understanding. We propose a <i>systematic</i> approach that organizes videos into a <b><i>hierarchical tree</i></b> structure for QA generation and incorporates <b><i>self-revision</i></b> mechanisms to ensure high-quality QA pairs. Each QA pair in LongViTU features: 1) long-term context (average <i>certificate length</i> of 4.6 minutes); 2) rich knowledge and condensed reasoning (commonsense, causality, planning, <i>etc.</i>)). We also offer explicit timestamp annotations of relevant events for each QA pair. We have conducted extensive human studies on LongViTU, and the results prove the quality of our dataset. To better evaluate the challenges posed by LongViTU’s emphasis on long-term context and condensed reasoning, we manually curate a subset of LongViTU into a benchmark. Evaluations using a state-of-the-art open-source model (LongVU), a proprietary model (Gemini-1.5-Pro), and human annotators yield GPT-4 scores of 49.9, 52.3, and 81.0, respectively, underscoring the substantial difficulty presented by LongViTU questions. Performing supervised fine-tuning (SFT) of LongVU and LLaVA-Video on LongViTU data results in average performance gains of 2.5% and 3.7%, respectively, across a suite of long video understanding benchmarks (EgoSchema, VideoMME-Long, MLVU, LVBench).
@@ -99,7 +99,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Pipeline</h2>
-        <img src="static/images/pipeline.jpg"/>
+        <img src="static/images/pipeline.png"/>
         <div class="content has-text-justified">
           <p style="text-align:justify; margin-bottom: 1.5em; margin-top: 1.5em;">
             We design an automatic pipeline to generate QA pairs from Ego4D videos while addressing the challenge of long-form video comprehension. To mitigate the context length limitation of LLMs and grasp spatial-temporal information in long video context, we employ a <b><i>hierarchical</i></b> tree structure. This structure first condenses dense captions to refine event descriptions and then segments content into sequential events with finer temporal granularity. Such representations facilitate the generation of QA pairs with <i>explicit timestamps</i> and varying <i>contextual lengths</i>, ensuring adaptability across different temporal levels (<i>frame level, event level, segment level</i>). Additionally, we design prompting strategies to generate high-quality questions that require condensed reasoning. Finally, a <b><i>self-revision</i></b> step refines results by removing redundancy and irrelevant prior information.
@@ -148,10 +148,10 @@
           <div class="container">
             <div class="columns is-vcentered">
               <div class="column">
-                <img src="./static/images/duration.jpg" style="height: 300px; width: auto;">
+                <img src="./static/images/duration.png" style="height: 300px; width: auto;">
               </div>
               <div class="column">
-                <img src="./static/images/sunburst.jpg" style="height: 300px; width: auto;">
+                <img src="./static/images/sunburst.png" style="height: 300px; width: auto;">
               </div>
             </div>
           </div>
